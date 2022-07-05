@@ -4,7 +4,7 @@
   "description": "Weekly Blog about techs, programming language, best practice, technique, new technology and whats happening, journey to getting a PL/Dev job, later on guide on getting jobs and what to learn how to learn and so on.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "author": "ROjan",
   "license": "ISC",
