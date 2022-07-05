@@ -1,7 +1,6 @@
 const bodyParser = require("body-parser");
 const express = require("express");
 const mongoose = require("mongoose");
-const port = process.env.PORT;
 
 require("dotenv").config();
 
@@ -31,6 +30,9 @@ app.get("/ourApiKey", (req, res) => {
   );
 });
 
-app.listen(5000 || port, () => {
-  console.log("Running on 5000 \n");
-});
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+app.listen(port);
+
