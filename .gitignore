@@ -1,5 +1,6 @@
 #Your API Key
 .env
+/*.env
 
 #dependencies
 /node_modules
