@@ -1,0 +1,36 @@
+<%- include('../partials/header') %>
+
+<div class="toDoList-container">
+  <div class="toDoList-Displayer list-group">
+    <h1><%= recievedList.name %></h1>
+    <form action="/AddItemToTestList" method="post">
+      <label for="items">ItemName</label>
+      <input
+        type="text"
+        name="newListItem"
+        id="listItems"
+        autocomplete="off"
+        required
+      />
+      <button class="btn btn-primary btn" type="submit">Add</button>
+    </form>
+
+    <% recievedList.listItem.forEach(items=>{ %>
+
+    <li class="list-group-item">
+     
+        <label name="toDeleteItem"><%=items.itemName%></label> 
+        <!-- store itemListID only for this example -->
+        <a href="/delete/<%=items._id%>"
+          class="btn-delete-item btn btn-light btn-outline-dark float-end"
+        >
+          <i class="fa-solid fa-trash"></i>
+      </a>
+      
+    </li>
+
+    <%}) %>
+  </div>
+</div>
+
+<%-include('./listHTML-Update')%> <%-include('../partials/footer')%>

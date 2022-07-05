@@ -1,0 +1,27 @@
+<!-- //BlogSample -->
+<div class="blogCard card border-6 shadow p-3 mb-5 bg-white rounded">
+    <div class="card-body">
+      <h3 class="card-title">Blog title</h3>
+      <h6 class="card-subtitle mb-2 text-muted">username possibly</h6>
+      <p class="card-text">
+        UserPostBody with substr(start, finish) Some quick example text to build
+        on the card title and make up the bulk of the card's content ... &nbsp;
+        <a href="#" class="card-link">Read More..</a>
+      </p>
+      <div class="mb-1 text-muted">22/2/6 Date Created</div>
+    </div>
+  </div>
+
+<% blogData.forEach((x)=>{ %>
+<div class="blogCard card border-6 shadow p-3 mb-5 bg-white rounded">
+  <div class="card-body">
+    <h3 class="card-title"><%= x.title %></h3>
+    <h6 class="card-subtitle mb-2 text-muted"><%= x.title %></h6>
+    <p class="card-text">
+      <%= x.postBody.substring(0,45) %> ... &nbsp;
+      <a href="#" class="card-link">Read More..</a>
+    </p>
+    <div class="mb-1 text-muted"><%= x.createdAt %></div>
+  </div>
+</div>
+<% }); %>

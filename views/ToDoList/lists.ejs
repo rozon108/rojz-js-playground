@@ -1,0 +1,67 @@
+<%- include('../partials/header') %> <br />
+ToDoList.ejs File Display list
+<div class="toDoList-container">
+  <div class="row">
+    <% recievedList.forEach((ourList)=>{ %>
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+      <div class="toDoList-Displayer list-group">
+        <h1><%= ourList.name %></h1>
+        <form action="/AddItemToList" method="post">
+          <label for="items">ItemName</label>
+          <input
+            type="text"
+            name="newListItem"
+            id="listItems"
+            autocomplete="off"
+            required
+          />
+          <div class="d-block me-3 float-end p-1">
+            <button class="btn btn-primary" type="submit">Add</button>
+          </div>
+        </form>
+        <%# List Items from the List %> <% ourList.listItem.forEach(x=>{ %>
+        <li class="list-group-item"><%= x.itemName %></li>
+        <% }) %>
+      </div>
+    </div>
+    <% })%>
+  </div>
+</div>
+
+<div class="toDoList-container createNewList">
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+      <div class="toDoList-Displayer list-group">
+        <form action="/AddItemToList" method="post">
+          <h1>
+            <input
+              type="text"
+              name="newListName"
+              id="listItemName"
+              autocomplete="off"
+              required
+            />
+          </h1>
+          <label for="items">ItemName</label>
+          <input
+            type="text"
+            name="newListItem"
+            id="listItems"
+            autocomplete="off"
+            required
+          />
+          <div class="d-block me-3 float-end p-1">
+            <button class="btn btn-primary" type="submit">Add</button>
+          </div>
+        </form>
+        <%# List Items from the List %> <% ourList.listItem.forEach(x=>{ %>
+        <li class="list-group-item"><%= x.itemName %></li>
+        <% }) %>
+      </div>
+    </div>
+    <% })%>
+  </div>
+</div>
+
+<%# Add UI to view List , create list, delete list item and delete list %>
+<%-include('../partials/footer')%>

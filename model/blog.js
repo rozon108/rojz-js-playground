@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const mongoDB_API = require('../connections')
+
+
 
 const blogSchema = new Schema({
     title: {
@@ -9,9 +12,12 @@ const blogSchema = new Schema({
     postBody: {
         type: String,
         required: true
+    },
+    userName:{
+        type:String
     }
 },{ timestamps: true});
 
-const Blog = mongoose.model('Blog', blogSchema);
+const Blog = mongoDB_API.weeklyBlogDB.model('Blog', blogSchema);
 
 module.exports = Blog;

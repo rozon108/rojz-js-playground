@@ -1,0 +1,91 @@
+.div {
+  background-color: #5e0b15 #550a13;
+}
+
+.div {
+  background-color: #90323d;
+}
+.div {
+  background-color: #b57e78;
+}
+
+.div {
+  background-color: #d9cab3;
+}
+
+/* Nav Bar via W3 and custom */
+.topnav {
+  overflow: hidden;
+  background-color: #a3585b;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.topnav a:hover {
+  background-color: #90323d;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Create a right-aligned (split) link inside the navigation bar */
+.topnav a.split {
+  float: right;
+  background-color: #550a13;
+  color: white;
+}
+.topnav a.split:hover {
+  transform: scale(1.2);
+}
+
+/* Blog Conatiner */
+.blogDisplayContainer {
+  margin: 1.2rem;
+  border: 3px;
+}
+.blogCard {
+  margin: 1.2rem;
+}
+
+/*ToDo List*/
+.toDoList-Displayer {
+  
+  width: auto;
+  margin: 2rem;
+  padding: 1rem;
+  border: 2px solid #550a13;
+}
+
+.list-Item {
+  width: auto;
+}
+ /* listitems buttons */
+.btn-delete-item:hover{
+  /* color:red; */
+  background-color: red;
+  border-color: red;
+}
+
+
+
+/* Footer */
+
+footer {
+  position: relative;
+  width: 100%;
+  color: white;
+  background-color: #a3585b;
+  text-decoration-color: #f2f2f2;
+}
+.footer-List {
+  display: flex;
+
+  justify-content: space-evenly;
+}
