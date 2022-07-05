@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const mongoDB_API = require('../connections')
-
-
+const mongoDB_API = require('../connections.js')
 
 const blogSchema = new Schema({
     title: {

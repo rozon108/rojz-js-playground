@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 const mongoDB_API = process.env.MONGODB_API_KEY;
-const mongoDB_WeeklyBlog_API = process.env.MONGODB_WEEKLY_BLOG_API_KEY;
-const mongoDB_TODOLIST_API = process.env.MONGODB_TODOLIST_API_KEY;
+// const mongoDB_WeeklyBlog_API = process.env.MONGODB_WEEKLY_BLOG_API_KEY;
+// const mongoDB_TODOLIST_API = process.env.MONGODB_TODOLIST_API_KEY;
 
 // const weeklyBlogDB = mongoose.createConnection(mongoDB_WeeklyBlog_API);
 // const toDoDB = mongoose.createConnection(mongoDB_TODOLIST_API);
